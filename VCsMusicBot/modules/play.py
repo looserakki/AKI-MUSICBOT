@@ -441,7 +441,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 <b>Processing</b>")
+    lel = await message.reply("🌀<b>𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -496,7 +496,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔎 <b>Finding</b>")
+    await lel.edit("🔎 <b>𝐅𝐢𝐧𝐝𝐢𝐧𝐠</b>")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -537,7 +537,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/62d9980a2bdbbd05cd11e.jpg"
+        thumb_name = "https://telegra.ph/file/62d9980a2bdbbd05cd11e.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -1274,7 +1274,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ <b>Playing</b> here the song requested by {r_by.mention} via YouTube Music.",
+            caption=f"▶️ <b>𝐏𝐥𝐚𝐲𝐢𝐧𝐠</b> 𝐇𝐞𝐫𝐞 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 {r_by.mention}.",
         )
         
         os.remove("final.png")
