@@ -14,7 +14,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
+            "<b>𝐀𝐝𝐝 𝐦𝐞 𝐚𝐬 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐲𝐨𝐫 𝐠𝐫𝐨𝐮𝐩 𝐟𝐢𝐫𝐬𝐭</b>",
         )
         return
 
@@ -33,12 +33,12 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @VCsMusicPlayer to your Group and try again</b>",
+            f"<b>🛑 𝐅𝐥𝐨𝐨𝐝 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫 🛑 \n 𝐔𝐬𝐞𝐫  {user.first_name} 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐣𝐨𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐝𝐮𝐞 𝐭𝐨 𝐡𝐞𝐚𝐯𝐲 𝐣𝐨𝐢𝐧 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐟𝐨𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭! 𝐌𝐚𝐤𝐞 𝐬𝐮𝐫𝐞 𝐮𝐬𝐞𝐫 𝐢𝐬 𝐧𝐨𝐭 𝐛𝐚𝐧𝐧𝐞𝐝 𝐢𝐧 𝐠𝐫𝐨𝐮𝐩."
+            "\n\n𝐎𝐫 𝐦𝐚𝐧𝐮𝐚𝐥𝐥𝐲 𝐚𝐝𝐝 @ERA_ASSISTANT 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐭𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 </b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your chat</b>",
+        "<b>𝐇𝐞𝐥𝐩𝐞𝐫 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐉𝐨𝐢𝐧𝐞𝐝 𝐘𝐨𝐮𝐫 𝐂𝐡𝐚𝐭</b>",
     )
 
 
@@ -49,8 +49,8 @@ async def rem(USER, message):
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            f"<b>User couldn't leave your group! May be floodwaits."
-            "\n\nOr manually kick me from to your Group</b>",
+            f"<b>𝐔𝐬𝐞𝐫 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐥𝐞𝐚𝐯𝐞 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩! 𝐌𝐚𝐲 𝐛𝐞 𝐟𝐥𝐨𝐨𝐝𝐰𝐚𝐢𝐭𝐬."
+            "\n\n𝐎𝐫 𝐦𝐚𝐧𝐮𝐚𝐥𝐥𝐲 𝐤𝐢𝐜𝐤 𝐦𝐞 𝐟𝐫𝐨𝐦 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩</b>",
         )
         return
     
@@ -81,38 +81,38 @@ async def addcchannel(client, message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("𝐈𝐬 𝐜𝐡𝐚𝐭 𝐞𝐯𝐞𝐧 𝐥𝐢𝐧𝐤𝐞𝐝")
       return    
     chat_id = chid
     try:
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor channel first</b>",
+            "<b>𝐀𝐝𝐝 𝐦𝐞 𝐚𝐬 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐲𝐨𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐟𝐢𝐫𝐬𝐭</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicBot"
+        user.first_name = "Era_Assistant"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id, "I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your channel</b>",
+            "<b>𝐡𝐞𝐥𝐩𝐞𝐫 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥</b>",
         )
         return
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @VCsMusicPlayer to your Group and try again</b>",
+            f"<b>🛑 𝐅𝐥𝐨𝐨𝐝 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫 🛑 \n 𝐔𝐬𝐞𝐫  {user.first_name} 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐣𝐨𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐝𝐮𝐞 𝐭𝐨 𝐡𝐞𝐚𝐯𝐲 𝐣𝐨𝐢𝐧 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐟𝐨𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭! 𝐌𝐚𝐤𝐞 𝐬𝐮𝐫𝐞 𝐮𝐬𝐞𝐫 𝐢𝐬 𝐧𝐨𝐭 𝐛𝐚𝐧𝐧𝐞𝐝 𝐢𝐧 𝐠𝐫𝐨𝐮𝐩."
+            "\n\n𝐎𝐫 𝐦𝐚𝐧𝐮𝐚𝐥𝐥𝐲 𝐚𝐝𝐝 @ERA_ASSISTANT 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐭𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 </b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your channel</b>",
+        "<b>𝐡𝐞𝐥𝐩𝐞𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥</b>",
     )
     
