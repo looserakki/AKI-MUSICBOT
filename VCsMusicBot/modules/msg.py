@@ -1,105 +1,104 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Hello 👋 [{}](tg://user?id={})!**\n\n🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels.\n\n✅ Hits /help for more info."
+      START_MSG = "**𝐇𝐞𝐥𝐥𝐨👋 [{}](tg://user?id={})!**\n\n🤖 𝐈 𝐚𝐦 𝐚𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐛𝐨𝐭 𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐭𝐡𝐞 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭𝐬 𝐨𝐟 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩𝐬 & 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬.\n\n🏆 𝐇𝐢𝐭𝐬 `/help` 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐢𝐧𝐟𝐨."
       HELP_MSG = [
         ".",
 f"""
-**Hello, Welcome to {PROJECT_NAME}
+**𝐇𝐞𝐥𝐥𝐨, 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 {PROJECT_NAME}
 
-⭕ I can play music in your group's voice chat as well as channel voice chats.
+⭕ 𝐈 𝐜𝐚𝐧 𝐩𝐥𝐚𝐲 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩'𝐬 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭 𝐚𝐬 𝐰𝐞𝐥𝐥 𝐚𝐬 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭𝐬.
 
-⭕ Assistant: @{ASSISTANT_NAME}\n\nClick Next ➡️ for instructions.**
+⭕ ༒𝐀𝐒𝐒𝐈𝐒𝐓𝐀𝐍𝐓༒: @{ASSISTANT_NAME}\n\n𝐂𝐥𝐢𝐜𝐤 𝐍𝐞𝐱𝐭 ➡️ 𝐟𝐨𝐫 𝐢𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐢𝐨𝐧𝐬.**
 """,
 
 f"""
-**Setting up**
+**𝐒𝐞𝐭𝐭𝐢𝐧𝐠 𝐮𝐩**
 
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play <song name> for the first time by an admin
- If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry.
+1) 𝐌𝐚𝐤𝐞 𝐛𝐨𝐭 𝐚𝐝𝐦𝐢𝐧 (𝐆𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐢𝐧 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐢𝐟 𝐮𝐬𝐞 𝐜𝐩𝐥𝐚𝐲)
+𝟐) 𝐒𝐭𝐚𝐫𝐭 𝐚 𝐯𝐨𝐢𝐜𝐞 𝐜𝐡𝐚𝐭
+𝟑) 𝐓𝐫𝐲 `/play<songname>` 𝐟𝐨𝐫 𝐭𝐡𝐞 𝐟𝐢𝐫𝐬𝐭 𝐭𝐢𝐦𝐞 𝐛𝐲 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧..
+4) 𝐈𝐟 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐞𝐧𝐣𝐨𝐲 𝐦𝐮𝐬𝐢𝐜, 𝐈𝐟 𝐧𝐨𝐭 𝐚𝐝𝐝 @{ASSISTANT_NAME} 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐚𝐧𝐝 𝐫𝐞𝐭𝐫𝐲.
 
-**For Channel Music Play**
-1) Make me admin of your channel.
-2) Send /userbotjoinchannel in linked group.
-3) Now send commands in linked group.
+**𝐅𝐨𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐌𝐮𝐬𝐢𝐜 𝐏𝐥𝐚𝐲**
+𝟏) 𝐌𝐚𝐤𝐞 𝐦𝐞 𝐚𝐝𝐦𝐢𝐧 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥.
+𝟐) 𝐒𝐞𝐧𝐝 `/userbotjoinchannel` 𝐢𝐧 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩.
+𝟑) 𝐍𝐨𝐰 𝐬𝐞𝐧𝐝 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐢𝐧 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩.
 
-**Commands**
+**𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬**
 
-**=>> Song Playing 🎧**
+**=>> 𝐒𝐨𝐧𝐠 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 🎧**
 
-- /play <song name>: Select the Given Below Keyboard.
-- /play <yt url>: Play the given YouTube URL.
-- /ytplay: Directly play song via YouTube Music.
-- /dplay: Play song via deezer.
-- /splay: Play song via jio saavn.
+- `/play <song name>`: 𝐒𝐞𝐥𝐞𝐜𝐭 𝐭𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐁𝐞𝐥𝐨𝐰 𝐊𝐞𝐲𝐛𝐨𝐚𝐫𝐝.
+- `/play <yt url>`: 𝐏𝐥𝐚𝐲 𝐭𝐡𝐞 𝐠𝐢𝐯𝐞𝐧 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐔𝐑𝐋.
+- `/ytplay`: 𝐃𝐢𝐫𝐞𝐜𝐭𝐥𝐲 𝐩𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐯𝐢𝐚 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐌𝐮𝐬𝐢𝐜.
+- `/dplay`: 𝐏𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐯𝐢𝐚 𝐝𝐞𝐞𝐳𝐞𝐫.
+- `/splay`: 𝐏𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐯𝐢𝐚 𝐣𝐢𝐨 𝐬𝐚𝐚𝐯𝐧.
 
-**=>> Playback ⏯**
+**=>> 𝐏𝐥𝐚𝐲𝐛𝐚𝐜𝐤 ⏯**
 
-- /player: Open Settings menu of player.
-- /skip: Skips the current track.
-- /pause: Pause track.
-- /resume: Resumes the paused track.
-- /end: Stops media playback.
-- /current: Shows the current Playing track.
-- /playlist: Shows playlist.
+- `/player`: 𝐎𝐩𝐞𝐧 𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐦𝐞𝐧𝐮 𝐨𝐟 𝐩𝐥𝐚𝐲𝐞𝐫.
+- `/skip`: 𝐒𝐤𝐢𝐩𝐬 𝐭𝐡𝐞 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐭𝐫𝐚𝐜𝐤.
+- `/pause`: 𝐏𝐚𝐮𝐬𝐞 𝐭𝐫𝐚𝐜𝐤.
+- `/resume`: 𝐑𝐞𝐬𝐮𝐦𝐞𝐬 𝐭𝐡𝐞 𝐩𝐚𝐮𝐬𝐞𝐝 𝐭𝐫𝐚𝐜𝐤.
+- `/end`: 𝐒𝐭𝐨𝐩𝐬 𝐦𝐞𝐝𝐢𝐚 𝐩𝐥𝐚𝐲𝐛𝐚𝐜𝐤.
+- `/current`: 𝐒𝐡𝐨𝐰𝐬 𝐭𝐡𝐞 𝐜𝐮𝐫𝐫𝐞𝐧𝐭 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐭𝐫𝐚𝐜𝐤.
+- `/playlist`: 𝐒𝐡𝐨𝐰𝐬 𝐩𝐥𝐚𝐲𝐥𝐢𝐬𝐭.
 
-**Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.**
-""",
+**𝐏𝐥𝐚𝐲𝐞𝐫 𝐜𝐦𝐝 𝐚𝐧𝐝 𝐚𝐥𝐥 𝐨𝐭𝐡𝐞𝐫 𝐜𝐦𝐝𝐬 𝐞𝐱𝐜𝐞𝐩𝐭 `/play, /current 𝐚𝐧𝐝 /playlist` 𝐚𝐫𝐞 𝐨𝐧𝐥𝐲 𝐟𝐨𝐫 𝐚𝐝𝐦𝐢𝐧𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩.**""",
         
 f"""
-**=>> Channel Music Play 👨‍🎤**
+**=>> 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐌𝐮𝐬𝐢𝐜 𝐏𝐥𝐚𝐲 👨‍🎤**
 
-**⭕ For linked group admins only:**
+**⭕ 𝐅𝐨𝐫 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩 𝐚𝐝𝐦𝐢𝐧𝐬 𝐨𝐧𝐥𝐲:**
 
-- /cplay <song name>: Play song you requested.
-- /cdplay <song name>: Play song you requested via deezer.
-- /csplay <song name>: Play song you requested via jio saavn.
-- /cplaylist: Show now playing list.
-- /cccurrent: Show now playing.
-- /cplayer: Open music player settings panel.
-- /cpause: Pause song play.
-- /cresume: Resume song play.
-- /cskip: Play next song.
-- /cend: Stop music play.
-- /userbotjoinchannel: Invite assistant to your chat.
+- ~/cplay <song name>`: 𝐏𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝.
+- `/cdplay <song name>`: 𝐏𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐯𝐢𝐚 𝐝𝐞𝐞𝐳𝐞𝐫.
+- `/csplay <song name>`: 𝐏𝐥𝐚𝐲 𝐬𝐨𝐧𝐠 𝐲𝐨𝐮 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐯𝐢𝐚 𝐣𝐢𝐨 𝐬𝐚𝐚𝐯𝐧.
+- `/cplaylist`: 𝐒𝐡𝐨𝐰 𝐧𝐨𝐰 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐥𝐢𝐬𝐭.
+- `/ccurrent`: 𝐒𝐡𝐨𝐰 𝐧𝐨𝐰 𝐩𝐥𝐚𝐲𝐢𝐧𝐠.
+- `/cplayer`: 𝐎𝐩𝐞𝐧 𝐦𝐮𝐬𝐢𝐜 𝐩𝐥𝐚𝐲𝐞𝐫 𝐬𝐞𝐭𝐭𝐢𝐧𝐠𝐬 𝐩𝐚𝐧𝐞𝐥.
+- `/cpause`: 𝐏𝐚𝐮𝐬𝐞 𝐬𝐨𝐧𝐠 𝐩𝐥𝐚𝐲.
+- `/cresume`: 𝐑𝐞𝐬𝐮𝐦𝐞 𝐬𝐨𝐧𝐠 𝐩𝐥𝐚𝐲.
+- `/cskip`: 𝐏𝐥𝐚𝐲 𝐧𝐞𝐱𝐭 𝐬𝐨𝐧𝐠.
+- `/cend`: 𝐒𝐭𝐨𝐩 𝐦𝐮𝐬𝐢𝐜 𝐩𝐥𝐚𝐲.
+- `/userbotjoinchannel`: 𝐈𝐧𝐯𝐢𝐭𝐞 𝐚𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭.
 
-**Channel is also can be used instead of c** ( /cplay = /channelplay )
+**𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐢𝐬 𝐚𝐥𝐬𝐨 𝐜𝐚𝐧 𝐛𝐞 𝐮𝐬𝐞𝐝 𝐢𝐧𝐬𝐭𝐞𝐚𝐝 𝐨𝐟 𝐜** ( /𝐜𝐩𝐥𝐚𝐲 = /𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐩𝐥𝐚𝐲 )
 
-**⭕ If you donlt like to play in linked group:**
+**⭕ 𝐈𝐟 𝐲𝐨𝐮 𝐝𝐨𝐧𝐥𝐭 𝐥𝐢𝐤𝐞 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐢𝐧 𝐥𝐢𝐧𝐤𝐞𝐝 𝐠𝐫𝐨𝐮𝐩:**
 
-1) Get your channel ID.
-2) Create a group with tittle: Channel Music: your_channel_id
-3) Add bot as Channel admin with full perms
-4) Add @{ASSISTANT_NAME} to the channel as an admin.
-5) Simply send commands in your group.
+𝟏) 𝐆𝐞𝐭 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐈𝐃.
+𝟐) 𝐂𝐫𝐞𝐚𝐭𝐞 𝐚 𝐠𝐫𝐨𝐮𝐩 𝐰𝐢𝐭𝐡 𝐭𝐢𝐭𝐭𝐥𝐞: 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐌𝐮𝐬𝐢𝐜: 𝐲𝐨𝐮𝐫_𝐜𝐡𝐚𝐧𝐧𝐞𝐥_𝐢𝐝
+𝟑) 𝐀𝐝𝐝 𝐛𝐨𝐭 𝐚𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐚𝐝𝐦𝐢𝐧 𝐰𝐢𝐭𝐡 𝐟𝐮𝐥𝐥 𝐩𝐞𝐫𝐦𝐬
+4) 𝐀𝐝𝐝 @{ASSISTANT_NAME} 𝐭𝐨 𝐭𝐡𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐚𝐬 𝐚𝐧 𝐚𝐝𝐦𝐢𝐧.
+𝟓) 𝐒𝐢𝐦𝐩𝐥𝐲 𝐬𝐞𝐧𝐝 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩.
 """,
 
 f"""
-**=>> More tools 😬**
+**=>> 𝐌𝐨𝐫𝐞 𝐭𝐨𝐨𝐥𝐬 😬**
 
-- /musicplayer <on/off> : Enable/Disable Music player
-- /reload: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
+- `/musicplayer<on/off>` : 𝐄𝐧𝐚𝐛𝐥𝐞/𝐃𝐢𝐬𝐚𝐛𝐥𝐞 𝐌𝐮𝐬𝐢𝐜 𝐩𝐥𝐚𝐲𝐞𝐫
+- `/reload``: 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐚𝐝𝐦𝐢𝐧 𝐢𝐧𝐟𝐨 𝐨𝐟 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩. 𝐓𝐫𝐲 𝐢𝐟 𝐛𝐨𝐭 𝐢𝐬𝐧'𝐭 𝐫𝐞𝐜𝐨𝐠𝐧𝐢𝐳𝐞 𝐚𝐝𝐦𝐢𝐧
+- `/userbotjoin`: 𝐈𝐧𝐯𝐢𝐭𝐞 @{ASSISTANT_NAME} 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭...
 """,
 f"""
-**=>> Song/Vid Download 📥**
-- /video [song mame]: Download video song from youtube
-- /song [song name]: Download audio song from youtube
-- /saavn [song name]: Download song from saavn
-- /deezer [song name]: Download song from deezer
+**=>> 𝐒𝐨𝐧𝐠/𝐕𝐢𝐝 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 📥**
+- `/video [SONG NAME]`: 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐯𝐢𝐝𝐞𝐨 𝐬𝐨𝐧𝐠 𝐟𝐫𝐨𝐦 𝐲𝐨𝐮𝐭𝐮𝐛𝐞
+- `/song [SONG NAME]`: 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐚𝐮𝐝𝐢𝐨 𝐬𝐨𝐧𝐠 𝐟𝐫𝐨𝐦 𝐲𝐨𝐮𝐭𝐮𝐛𝐞
+- `/saavn [SONG NAME]`: 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐬𝐨𝐧𝐠 𝐟𝐫𝐨𝐦 𝐬𝐚𝐚𝐯𝐧
+- `/deezer [SONG NAME]`: 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐬𝐨𝐧𝐠 𝐟𝐫𝐨𝐦 𝐝𝐞𝐞𝐳𝐞𝐫
 
-**=>> Search Tools 🔍**
-- /search [song name]: Search youtube for songs
-- /lyrics [song name]: Get song lyrics
+**=>> 𝐒𝐞𝐚𝐫𝐜𝐡 𝐓𝐨𝐨𝐥𝐬 🔍**
+- `/search [SONG NAME]`: 𝐒𝐞𝐚𝐫𝐜𝐡 𝐲𝐨𝐮𝐭𝐮𝐛𝐞 𝐟𝐨𝐫 𝐬𝐨𝐧𝐠𝐬
+- `/lyrics [SONG NAME]`: 𝐆𝐞𝐭 𝐬𝐨𝐧𝐠 𝐥𝐲𝐫𝐢𝐜𝐬
 """,
 
 f"""
-**=>> Commands for Sudo Users 👮**
- - /userbotleaveall - remove assistant from all chats
- - /broadcast <reply to message> - globally brodcast replied message to all chats
- - /pmpermit [on/off] - enable/disable pmpermit message
-**Sudo Users can execute any command in any groups.**
+**=>> 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐟𝐨𝐫 𝐒𝐮𝐝𝐨 𝐔𝐬𝐞𝐫𝐬 👮**
+ - `/userbotleaveall` - 𝐫𝐞𝐦𝐨𝐯𝐞 𝐚𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐟𝐫𝐨𝐦 𝐚𝐥𝐥 𝐜𝐡𝐚𝐭𝐬
+ - `broadcast <reply to message>` - 𝐠𝐥𝐨𝐛𝐚𝐥𝐥𝐲 𝐛𝐫𝐨𝐝𝐜𝐚𝐬𝐭 𝐫𝐞𝐩𝐥𝐢𝐞𝐝 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐭𝐨 𝐚𝐥𝐥 𝐜𝐡𝐚𝐭𝐬
+ - `/pmpermit [on/off]` - 𝐞𝐧𝐚𝐛𝐥𝐞/𝐝𝐢𝐬𝐚𝐛𝐥𝐞 𝐩𝐦𝐩𝐞𝐫𝐦𝐢𝐭 𝐦𝐞𝐬𝐬𝐚𝐠𝐞
+**𝐒𝐮𝐝𝐨 𝐔𝐬𝐞𝐫𝐬 𝐜𝐚𝐧 𝐞𝐱𝐞𝐜𝐮𝐭𝐞 𝐚𝐧𝐲 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐢𝐧 𝐚𝐧𝐲 𝐠𝐫𝐨𝐮𝐩𝐬.**
 """
-      ]
+  ]
