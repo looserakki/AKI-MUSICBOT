@@ -14,38 +14,38 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "⚙️𝐏𝐔𝐒𝐇 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏⚙️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/{SUPPORT_GROUP}"), 
+                        "𝐒𝐔𝐏𝐏𝐎𝐑𝐓🏷️", url=f"https://t.me/{SUPPORT_GROUP}"), 
                     InlineKeyboardButton(
-                        "Channel 📢", url=f"https://t.me/{UPDATES_CHANNEL}")
+                        "𝐔𝐏𝐃𝐀𝐓𝐄🗞️", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "🔥 Source Code 🔥", url=f"https://{SOURCE_CODE}")
+                        "𝐌𝐔𝐒𝐈𝐂 𝐖𝐎𝐑𝐋𝐃🌍", url=f"https://{SOURCE_CODE}")
                 ]
             ]
         ),
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.command(["start","start@VCsMusicBot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start","start@ERAGANGMUSICBOT"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**{PROJECT_NAME} is online.**""",
+        f"""**𝐌𝐔𝐒𝐈𝐂𝐀𝐋 𝐄𝐑𝐀 𝐎𝐍 𝐅𝐈𝐑𝐄 🔥.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "𝐒𝐔𝐏𝐏𝐎𝐑𝐓🏷️", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "🔎 Search YT", switch_inline_query_current_chat=""
+                        "𝐘𝐓 𝐒𝐄𝐀𝐑𝐂𝐇🔍", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "Close ❌", callback_data="close"
+                        "𝐂𝐥𝐨𝐬𝐞🆑", callback_data="close"
                     )
                 ]
             ]
@@ -80,35 +80,36 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️ Next', callback_data = "help+2")]
+            [InlineKeyboardButton(text = '𝐍𝐄𝐗𝐓', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '👥 Group', url=f"https://t.me/{SUPPORT_GROUP}"),
-             InlineKeyboardButton(text = 'Channel 📢', url=f"https://t.me/{UPDATES_CHANNEL}")],
-            [InlineKeyboardButton(text = '🔥 Source Code 🔥', url=f"https://{SOURCE_CODE}")],
-            [InlineKeyboardButton(text = '◀️ Back', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton("⚙️𝐏𝐔𝐒𝐇 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏⚙️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '𝐒𝐔𝐏𝐏𝐎𝐑𝐓🏷️', url=f"https://t.me/{SUPPORT_GROUP}"),
+             InlineKeyboardButton(text = '𝐔𝐏𝐃𝐀𝐓𝐄🗞️', url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton(text = '𝐌𝐔𝐒𝐈𝐂 𝐖𝐎𝐑𝐋𝐃🌍', url=f"https://t.me/frndsXworld")],
+            [InlineKeyboardButton(text = '𝐁𝐀𝐂𝐊', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
             [
-                InlineKeyboardButton(text = '◀️ Back', callback_data = f"help+{pos-1}"),
-                InlineKeyboardButton(text = 'Next ▶️', callback_data = f"help+{pos+1}")
+                InlineKeyboardButton(text = '◀️𝐁𝐀𝐂𝐊', callback_data = f"help+{pos-1}"),
+                InlineKeyboardButton(text = '𝐍𝐄𝐗𝐓▶️', callback_data = f"help+{pos+1}")
             ],
         ]
     return button
 
-@Client.on_message(filters.command(["help","help@VCsMusicBot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["help","help@ERAGANGMUSICBOT"]) & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**𝐇𝐞𝐥𝐥𝐨 𝐭𝐡𝐞𝐫𝐞🎸...
+𝐀𝐦 𝐬𝐩𝐞𝐜𝐢𝐚𝐥𝐥𝐲 𝐦𝐚𝐝𝐞 𝐭𝐨 𝐩𝐥𝐚𝐲 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐠𝐫𝐨𝐮𝐩 𝐯𝐨𝐢𝐜𝐞𝐜𝐡𝐚𝐭.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Click here for help", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "𝐍𝐄𝐄𝐃 𝐇𝐄𝐋𝐏🌂", url=f"https://t.me/{BOT_USERNAME}?start"
                     )
                 ]
             ]
