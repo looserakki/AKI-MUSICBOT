@@ -26,4 +26,4 @@ async def bye(client, message):
                 await lol.edit(f"Gcasting.. Sent: {sent} chats. Failed: {failed} chats.")
                 await asyncio.sleep(0.7)
                 
-        await message.reply_text(f"Gcasted message to {sent} chats. Failed {failed} chats.")
+        await message.reply_text(f"Gcasted message to {sent} no or chats. Failed {failed} chats.")
